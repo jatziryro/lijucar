@@ -9,9 +9,326 @@
 
   <!-- FUENTE -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="imagen/WhatsApp Image 2026-05-27 at 18.22.24.jpeg">
-<link rel="stylesheet" href="estilos.css">
-  
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#f8fafc;
+      color:#1e293b;
+      line-height:1.6;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      width:100%;
+      background:white;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo img{
+      width:60px;
+      border-radius:12px;
+    }
+
+    .logo h1{
+      color:#0b1a5e;
+      font-size:28px;
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:35px;
+    }
+
+    .nav-link{
+      text-decoration:none;
+      color:#475569;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:#1d4fb3;
+    }
+
+    .activo{
+      color:#1d4fb3;
+    }
+
+    .btn-cotizar{
+      background:#1d4fb3;
+      color:white;
+      padding:14px 26px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn-cotizar:hover{
+      background:#163d8f;
+    }
+
+    /* HERO */
+
+    header{
+      background:linear-gradient(135deg,#04125c,#1d4fb3);
+      color:white;
+      padding:80px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:40px;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-text h1{
+      font-size:55px;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      margin-bottom:30px;
+      color:#dbeafe;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s ease;
+      margin-right:15px;
+    }
+
+    .btn-primary{
+      background:#4dccc2;
+      color:#0f172a;
+    }
+
+    .btn-primary:hover{
+      background:#39b8ae;
+    }
+
+    .btn-secondary{
+      border:2px solid white;
+      color:white;
+    }
+
+    .btn-secondary:hover{
+      background:white;
+      color:#0f172a;
+    }
+
+    /* HERO CARD */
+
+    .hero-card{
+      flex:1;
+      min-width:280px;
+      background:rgba(255,255,255,0.1);
+      padding:40px;
+      border-radius:25px;
+      backdrop-filter:blur(10px);
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .stat-box{
+      background:rgba(255,255,255,0.08);
+      padding:25px;
+      border-radius:20px;
+      text-align:center;
+    }
+
+    .stat-box h2{
+      color:#4dccc2;
+      font-size:35px;
+      margin-bottom:10px;
+    }
+
+    /* SECCIONES */
+
+    section{
+      padding:90px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#64748b;
+      max-width:700px;
+      margin:auto;
+    }
+
+    /* SERVICIOS */
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:white;
+      padding:35px;
+      border-radius:25px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .service-icon{
+      font-size:45px;
+      margin-bottom:20px;
+    }
+
+    .service-card h3{
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:flex;
+      align-items:center;
+      gap:50px;
+      flex-wrap:wrap;
+    }
+
+    .about-text,
+    .about-box{
+      flex:1;
+      min-width:300px;
+    }
+
+    .about-text h2{
+      font-size:42px;
+      margin-bottom:25px;
+    }
+
+    .about-text p{
+      margin-bottom:20px;
+      color:#475569;
+    }
+
+    .about-box{
+      background:linear-gradient(135deg,#dbeafe,#cbd5e1);
+      padding:40px;
+      border-radius:30px;
+    }
+
+    .feature{
+      background:white;
+      padding:25px;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+
+    .feature h3{
+      margin-bottom:10px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:70px 10%;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin:40px 0;
+    }
+
+    .contact-card{
+      background:rgba(255,255,255,0.08);
+      padding:30px;
+      border-radius:20px;
+    }
+
+    .contact-card h3{
+      margin-bottom:12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .navbar{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero-text h1{
+        font-size:40px;
+      }
+
+      .section-title h2,
+      .about-text h2{
+        font-size:32px;
+      }
+
+      header{
+        padding-top:60px;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
@@ -21,7 +338,7 @@
   <nav class="navbar">
 
     <div class="logo">
-       <img src="imagen/logo.png" alt="Logo">
+      <img src="imagen/logo.png" alt="Logo">
       <h1>Lijucar</h1>
     </div>
 
@@ -104,162 +421,6 @@
           <p>Cobertura internacional</p>
         </div>
 
-      </div>
-
-    </div>
-
   </header>
-
-  <!-- SERVICIOS -->
-  <section id="servicios">
-
-    <div class="section-title">
-      <h2>Nuestros Servicios</h2>
-
-      <p>
-        Soluciones integrales adaptadas a cada operación de comercio exterior.
-      </p>
-    </div>
-
-    <div class="services">
-
-      <div class="service-card">
-        <div class="service-icon">🌎</div>
-
-        <h3>Importaciones</h3>
-
-        <p>
-          Asesoría completa para importar productos de manera segura y eficiente.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🚢</div>
-
-        <h3>Exportaciones</h3>
-
-        <p>
-          Estrategias internacionales para expandir tu empresa a nuevos mercados.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📦</div>
-
-        <h3>Logística Internacional</h3>
-
-        <p>
-          Optimización de procesos aduanales y cadenas de suministro.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📑</div>
-
-        <h3>Clasificación Arancelaria</h3>
-
-        <p>
-          Determinación correcta de fracciones arancelarias y cumplimiento legal.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section>
-
-    <div class="about">
-
-      <div class="about-text">
-
-        <h2>
-          Expertos en comercio internacional
-        </h2>
-
-        <p>
-          Ayudamos a empresas a optimizar sus operaciones internacionales mediante estrategias personalizadas y soluciones eficientes.
-        </p>
-
-        <p>
-          Nuestro equipo cuenta con experiencia en normativas, logística y operaciones de comercio exterior.
-        </p>
-
-        <a href="#contacto" class="btn btn-primary">
-          Agenda una consulta
-        </a>
-
-      </div>
-
-      <div class="about-box">
-
-        <div class="feature">
-          <h3>Cumplimiento normativo</h3>
-
-          <p>
-            Opera conforme a las regulaciones nacionales e internacionales.
-          </p>
-        </div>
-
-        <div class="feature">
-          <h3>Optimización de costos</h3>
-
-          <p>
-            Diseñamos estrategias para reducir tiempos y costos logísticos.
-          </p>
-        </div>
-
-        <div class="feature">
-          <h3>Atención personalizada</h3>
-
-          <p>
-            Soluciones adaptadas a cada cliente y tipo de operación.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="contacto">
-
-    <h2>
-      Lleva tu empresa al siguiente nivel
-    </h2>
-
-    <p>
-      Contáctanos y recibe asesoría especializada para tus operaciones internacionales.
-    </p>
-
-    <div class="contact-grid">
-
-      <div class="contact-card">
-        <h3>Correo</h3>
-        <p>contacto@consultoria.com</p>
-      </div>
-
-      <div class="contact-card">
-        <h3>Teléfono</h3>
-        <p>+52 55 0000 0000</p>
-      </div>
-
-      <div class="contact-card">
-        <h3>Ubicación</h3>
-        <p>Ciudad de México, México</p>
-      </div>
-
-    </div>
-
-    <a href="#" class="btn btn-primary">
-      Contactar ahora
-    </a>
-
-  </footer>
-
 </body>
-
-</html>
+  </html>
