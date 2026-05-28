@@ -8,6 +8,114 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/imagen/WhatsApp Image 2026-05-27 at 18.22.24.jpeg">
 
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú Lightman Global</title>
+</head>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      width:100%;
+      background:white;
+      padding:20px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* LOGO */
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo img{
+      width:70px;
+    }
+
+    .logo h1{
+      font-size:22px;
+      color:#0b1a5e;
+    }
+
+    /* MENU */
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:40px;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:#3d4b66;
+      font-size:18px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .menu a:hover{
+      color:#1d4fb3;
+    }
+
+    /* ACTIVO */
+    .menu a.active{
+      color:#1d4fb3;
+      font-weight:bold;
+    }
+
+    /* BOTON */
+    .btn-cotizar{
+      background:#1d4fb3;
+      color:white !important;
+      padding:15px 30px;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .btn-cotizar:hover{
+      background:#163d8f;
+    }
+
+  </style>
+
+<body>
+
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <h1>Lightman Global</h1>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu">
+      <a href="#">Inicio</a>
+      <a href="#">Transporte</a>
+      <a href="#">Comercializadora</a>
+      <a href="#">Aduana</a>
+      <a href="#" class="active">Almacenadora</a>
+      <a href="#" class="btn-cotizar">Cotizar</a>
+    </div>
+
+  </nav>
+
+</body>
+
+
   <style>
     * {
       margin: 0;
