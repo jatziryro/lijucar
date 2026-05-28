@@ -1,0 +1,70 @@
+/* SECCION GENERAL */
+
+.pagina{
+    min-height:90vh;
+    background:#04125c;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px;
+    gap:60px;
+}
+
+/* TEXTO */
+
+.contenido-pagina{
+    width:50%;
+}
+
+.etiqueta{
+    background:#0d6efd;
+    padding:10px 22px;
+    border-radius:30px;
+    display:inline-block;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.contenido-pagina h1{
+    font-size:70px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.contenido-pagina p{
+    font-size:20px;
+    line-height:1.7;
+    color:#d6d6d6;
+    margin-bottom:35px;
+}
+
+/* BOTON */
+
+.boton-principal{
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:18px 35px;
+    border-radius:14px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.boton-principal:hover{
+    background:#1746a2;
+}
+
+/* IMAGEN */
+
+.imagen-pagina{
+    width:50%;
+}
+
+.imagen-pagina img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 4px 30px rgba(0,0,0,0.1); 
+    object-fit:cover;
+}
